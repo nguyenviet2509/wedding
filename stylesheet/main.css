@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700");
+@font-face {
+  font-family: 'SVN-Saudagar';
+  src: url("../font/SVN-Saudagar.otf");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  font-size: 50%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Cormorant', serif;
+  color: #121729;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.font-charm {
+  font-family: 'Charm', serif;
+}
+
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.fs-16 {
+  font-size: 1.6rem;
+}
+
+.fs-18 {
+  font-size: 1.8rem;
+}
+
+.fs-20 {
+  font-size: 2rem;
+}
+
+.fs-24 {
+  font-size: 2.4rem;
+}
+
+.fs-32 {
+  font-size: 3.2rem;
+}
+
+.fs-38 {
+  font-size: 3.8rem;
+}
+
+.fs-48 {
+  font-size: 4.8rem;
+}
+
+.fs-78 {
+  font-size: 7.8rem;
+}
+
+.invite-page {
+  overflow: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.text-fill-color, .invite-wrap .invite-text p:last-child, .invite-wrap .invite-content .invite-sub, .invite-wrap .invite-content .invite-date, .invite-wrap .invite-content .invite-character, .invite-wrap .invite-opening .invite-content .groom:before {
+  background: var(--Gold, linear-gradient(90deg, #BE966E -0.03%, #E2CF9E 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.invite-character, .invite-wrap .invite-content .invite-character, .invite-wrap .invite-opening .invite-content .groom:before {
+  font-family: 'SVN-Saudagar';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%) rotate(15deg);
+          transform: translate(-50%, -50%) rotate(15deg);
+  opacity: 0.4;
+}
+
+.invite-wrap {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  /* opening */
+}
+.invite-wrap .invite-front, .invite-wrap .invite-opening {
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1.5s -webkit-transform;
+  transition: 1.5s -webkit-transform;
+  transition: 1.5s transform;
+  transition: 1.5s transform, 1.5s -webkit-transform;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+.invite-wrap .invite-front.flipped, .invite-wrap .invite-opening.flipped {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.invite-wrap .invite-front.active {
+  z-index: 2;
+}
+.invite-wrap .invite-front-box {
+  position: relative;
+}
+.invite-wrap .invite-front-box .invite-character, .invite-wrap .invite-front-box .invite-opening .invite-content .groom:before, .invite-wrap .invite-opening .invite-content .invite-front-box .groom:before {
+  top: 35% !important;
+}
+.invite-wrap .invite-frame {
+  height: calc(100vh - 34px);
+  border-radius: 4px;
+  border: 7px solid transparent;
+  margin: 10px;
+  position: relative;
+  background-clip: padding-box;
+  background: #fff;
+}
+.invite-wrap .invite-frame:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -10px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(-0.03%, #BE966E), to(#E2CF9E));
+  background-image: linear-gradient(90deg, #BE966E -0.03%, #E2CF9E 100%);
+  border-radius: inherit;
+}
+.invite-wrap .invite-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 9999;
+}
+.invite-wrap .invite-title {
+  border-radius: 100%;
+  border: 7px solid transparent;
+  background: #FFF;
+  width: 245px;
+  height: 245px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 78px;
+  background-clip: padding-box;
+  background: #fff;
+}
+.invite-wrap .invite-title:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -10px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(-0.03%, #BE966E), to(#E2CF9E));
+  background-image: linear-gradient(90deg, #BE966E -0.03%, #E2CF9E 100%);
+  border-radius: inherit;
+}
+.invite-wrap .invite-title .invite__image--tl, .invite-wrap .invite-title .invite__image--br {
+  width: 200px;
+  height: auto;
+}
+.invite-wrap .invite-title .invite__image--tl {
+  position: absolute;
+  top: -40px;
+  left: -45px;
+}
+.invite-wrap .invite-title .invite__image--br {
+  position: absolute;
+  bottom: -80px;
+  right: -30px;
+}
+.invite-wrap .invite__image--bottom {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+}
+.invite-wrap .invite__image--bottom img {
+  width: 100%;
+  height: auto;
+}
+.invite-wrap .invite-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+.invite-wrap .invite-text p:first-child {
+  color: #121729;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1.52px;
+  text-transform: uppercase;
+}
+.invite-wrap .invite-text p:last-child {
+  font-size: 7.8rem;
+  font-weight: 500;
+  line-height: 54px;
+  text-transform: uppercase;
+}
+.invite-wrap .invite-content {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+.invite-wrap .invite-content .invite-sub {
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+.invite-wrap .invite-content .invite-name {
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 2.56px;
+  text-transform: uppercase;
+}
+.invite-wrap .invite-content .invite-date {
+  font-weight: 300;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  margin-bottom: 5px;
+}
+.invite-wrap .invite-content .invite-character, .invite-wrap .invite-opening .invite-content .groom:before {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+}
+.invite-wrap .invite-button {
+  border-radius: 1000px;
+  border: 8px solid transparent;
+  position: relative;
+  background-clip: padding-box;
+  background: #fff;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.64px;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+}
+.invite-wrap .invite-button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -10px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(-0.03%, #BE966E), to(#E2CF9E));
+  background-image: linear-gradient(90deg, #BE966E -0.03%, #E2CF9E 100%);
+  border-radius: inherit;
+}
+.invite-wrap .invite-opening {
+  opacity: 0;
+}
+.invite-wrap .invite-opening .active {
+  position: relative;
+  z-index: 1;
+}
+.invite-wrap .invite-opening .invite-opening-box {
+  position: relative;
+  z-index: 1;
+}
+.invite-wrap .invite-opening .invite__image--top {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 2;
+}
+.invite-wrap .invite-opening .invite__image--top img {
+  width: 100%;
+  height: auto;
+}
+.invite-wrap .invite-opening .invite-content {
+  margin-top: 0;
+}
+.invite-wrap .invite-opening .invite-content .groom {
+  position: relative;
+}
+.invite-wrap .invite-opening .invite-content .groom:before {
+  content: '&';
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  font-size: 4.8rem;
+}
+.invite-wrap .invite-opening .invite-content .invite-name {
+  line-height: 50px;
+}
+.invite-wrap .invite-opening .invite-content .invite-sub {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  line-height: 24px;
+}
+.invite-wrap .invite-opening .invite-content .invite-date {
+  -webkit-transform: unset;
+          transform: unset;
+  background: unset;
+  -webkit-text-fill-color: unset;
+}
+.invite-wrap .invite-opening .invite-content .invite-date .day {
+  font-weight: 300;
+  line-height: 24px;
+}
+.invite-wrap .invite-opening .invite-content .invite-date .time {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 0;
+  display: block;
+}
+.invite-wrap .invite-opening .invite-content .invite-address {
+  text-align: center;
+  margin-top: 15px;
+}
+.invite-wrap .invite-opening .invite-content .invite-address .invite__address--content {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  line-height: 32px;
+}
+.invite-wrap .invite-opening .invite-content .invite-address .time {
+  margin-bottom: 6px;
+}
+.invite-wrap .invite-opening .invite-button-close {
+  margin-top: 30px;
+}
+.invite-wrap .invite-front .lunar-date {
+  -webkit-transform: translateY(-26px);
+          transform: translateY(-26px);
+}
+
+@media (max-height: 670px), (max-width: 365px) {
+  html, body {
+    font-size: 40%;
+  }
+
+  .invite-wrap .invite-title .invite__image--tl, .invite-wrap .invite-title .invite__image--br {
+    width: 160px;
+  }
+  .invite-wrap .invite-title {
+    width: 200px;
+    height: 200px;
+  }
+  .invite-wrap .invite-text p:first-child {
+    line-height: 25px;
+  }
+  .invite-wrap .invite-front .invite-character, .invite-wrap .invite-front .invite-opening .invite-content .groom:before, .invite-wrap .invite-opening .invite-content .invite-front .groom:before {
+    top: 36% !important;
+  }
+  .invite-wrap .address {
+    line-height: 24px;
+  }
+  .invite-wrap .invite-sub {
+    margin-top: 5px;
+  }
+  .invite-wrap .invite__address--content {
+    margin-top: 0 !important;
+  }
+  .invite-wrap .time {
+    margin-bottom: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
