@@ -51,6 +51,7 @@ html, body {
 
 body {
 	line-height: 1.5;
+	font-size: 1.6rem;
 	font-family: 'Cormorant', serif;
 	color: #121729;
 }
@@ -424,6 +425,27 @@ img {
 		transform: translateY(-26px);
 	}
 }
+
+/* Index */
+.section {
+	margin-bottom: 5rem;
+}
+
+.section-gallery {
+
+	& .gallery {
+		overflow: hidden;
+	}
+}
+
+.img-scroll-animate {
+	margin-bottom: 4px;
+
+	& .row {
+		flex-wrap: nowrap;
+	}
+}
+/* End Index */
 
 /* Catalogue */
 /* End Catalogue */

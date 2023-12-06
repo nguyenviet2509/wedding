@@ -28,3 +28,69 @@ $('.invite-button-close').on('click', function() {
     $('.invite-opening').css('opacity', 0);
   }, 800);
 });
+
+function initMarqueeSlider() {
+  gsap.registerPlugin(ScrollTrigger);
+  jQuery('.img-scroll-animate').each(function() {
+      var container = jQuery(this);
+      var isReverse = container.hasClass('reverse');
+      var $win = jQuery(window);
+      var holder = container.find('.row');
+      var timer;
+    
+      var speed = 1;
+      var slides = holder.find('.col-xl-4');
+      slides.each(function() {
+          var slide = jQuery(this);
+          var clone = slide.clone();
+          holder.append(clone);   
+      });
+      var i = isReverse ? holder[0].scrollWidth/2 : 0;
+      initInternval();
+      
+      function initInternval() {
+          timer = setInterval(function () {
+              holder.css('transform', `translate3d(-${i}px, 0, 0)`);
+              if(isReverse) {
+                  if (i <= 0 ) {
+                    i = holder[0].scrollWidth/2;
+                  }
+                  i = i  - speed;
+              } else {
+                  if (i > (holder[0].scrollWidth/2) ) {
+                      i = 0;
+                  }
+                  i = i + speed;
+              }
+          }, 40);
+      }
+    
+      container.hover(function() {
+          clearInterval(timer);
+      }, function() {
+          initInternval();
+      })
+    
+      var tl = gsap.timeline({
+          scrollTrigger: {
+              trigger: container,
+              markers: false,
+              toggleActions: 'play reverse play reverse',
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.25,
+              onUpdate: (self) => {
+                  if(isReverse) {
+                      gsap.to(container, {x: '+' + self.progress*30+'%'})
+                  } else {
+                    gsap.to(container, {x: '-' + self.progress*30+'%'})
+                  }
+              }
+          }
+      });
+  });
+}
+
+if($('.home-page').length) {
+  initMarqueeSlider();
+}
