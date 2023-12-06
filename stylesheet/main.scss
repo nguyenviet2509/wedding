@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'SVN-Saudagar';
-  src: url('../font/SVN-Saudagar.otf');
+  src: url('../fonts/SVN-Saudagar.otf');
 }
 
 html, body, div, span, applet, object, iframe,
@@ -103,6 +103,8 @@ img {
 .invite-page {
 	overflow: hidden;
 	perspective: 1000px;
+	max-width: 450px;
+	margin: 0 auto;
 }
 
 .text-fill-color {
@@ -122,11 +124,11 @@ img {
 	opacity: 0.4;
 }
 
-.invite-wrap {
+	.invite-wrap {
   	transform-style: preserve-3d;
 
   	& .invite-front,
-	& .invite-opening{
+		& .invite-opening{
 	  	position: absolute;
 	  	color: black;
 	  	width: 100%;
@@ -309,6 +311,7 @@ img {
 		text-align: center;
 		width: 100px;
 		margin: 0 auto;
+		cursor: pointer;
 
 		&:before {
 			content: "";
@@ -419,6 +422,27 @@ img {
 
 	& .invite-front .lunar-date {
 		transform: translateY(-26px);
+	}
+}
+
+/* Catalogue */
+/* End Catalogue */
+
+@media(min-width: 767px) {
+	.invite-wrap {
+
+		& .invite-front.flipped {
+	  	transform: rotateY(-125deg);
+		}
+	}
+}
+
+@media(min-width: 1024px) {
+	.invite-wrap {
+
+		& .invite-front.flipped {
+	  	transform: rotateY(-110deg);
+		}
 	}
 }
 
