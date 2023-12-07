@@ -432,6 +432,17 @@ img {
 }
 
 /* Index */
+.img-scroll-animate {
+
+	& .row {
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	}
+
+	&.reverse {
+		margin-top: 20px;
+	}
+}
 /* End Index */
 
 /* Catalogue */

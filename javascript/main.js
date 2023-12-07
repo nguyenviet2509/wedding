@@ -183,7 +183,7 @@ var snowFall = function() {
   }
 }();
 
-var SNOW_Picture = 'http://localhost:3000/images/heart.png';
+var SNOW_Picture = window.location.origin + '/images/heart.png';
 var special_custom = ['646f6e3d778825e6f306667f', '64a04f6beb89a210fc07656a'];
 window.onload = (event) => {
     setTimeout(function() {
@@ -206,8 +206,15 @@ if($('.home-page').length) {
   initMarqueeSlider();
 }
 
-//preload
 $(window).on('load', function() {
   $("#status").fadeOut();
   $("#preloader").delay(350).fadeOut("slow");
 });
+
+setInterval(function() {
+  var timespan = countdown(new Date("11/27/2021"), new Date());
+  $('.info.years span.odometer').text(timespan.years);
+  $('.info.months span.odometer').text(timespan.months);
+  $('.info.days span.odometer').text(timespan.days);
+  $('.info.hours span.odometer').text(timespan.hours);
+}, 1000);
