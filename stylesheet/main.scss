@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700');
 
 @font-face {
   font-family: 'SVN-Saudagar';
   src: url('../fonts/SVN-Saudagar.otf');
+}
+
+@font-face {
+  font-family: 'monallesia';
+  src: url('../fonts/monallesiascript.woff2');
 }
 
 html, body, div, span, applet, object, iframe,
@@ -427,24 +432,6 @@ img {
 }
 
 /* Index */
-.section {
-	margin-bottom: 5rem;
-}
-
-.section-gallery {
-
-	& .gallery {
-		overflow: hidden;
-	}
-}
-
-.img-scroll-animate {
-	margin-bottom: 4px;
-
-	& .row {
-		flex-wrap: nowrap;
-	}
-}
 /* End Index */
 
 /* Catalogue */
