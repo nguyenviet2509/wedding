@@ -227,6 +227,6 @@ if (window.location.hash == '#invitation') {
       }, 'slow');
     }, 500);
   } else {
-    window.location.href = 'invitation';
+    window.location.href = 'invitation.html';
   }
 }
