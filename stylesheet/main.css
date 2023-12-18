@@ -56,6 +56,10 @@ html, body {
   font-size: 50%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   font-size: 1.6rem;

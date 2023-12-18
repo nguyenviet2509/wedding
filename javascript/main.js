@@ -183,33 +183,33 @@ var snowFall = function() {
   }
 }();
 
-var SNOW_Picture = window.location.origin + '/images/heart.png';
-var special_custom = ['646f6e3d778825e6f306667f', '64a04f6beb89a210fc07656a'];
-window.onload = (event) => {
-    setTimeout(function() {
-        let flakeCount = 50;
-        if (window.innerWidth <= 650) {
-            flakeCount = 3;
-        }
-        snowFall.snow(document.getElementsByTagName('body')[0], {
-            image: SNOW_Picture,
-            minSize: 15,
-            maxSize: 32,
-            flakeCount: flakeCount,
-            maxSpeed: 3,
-            minSpeed: 1
-        });
-    }, 300);
-};
-
 if($('.home-page').length) {
   initMarqueeSlider();
-}
 
-$(window).on('load', function() {
-  $("#status").fadeOut();
-  $("#preloader").delay(350).fadeOut("slow");
-});
+  var SNOW_Picture = window.location.origin + '/images/heart.png';
+  var special_custom = ['646f6e3d778825e6f306667f', '64a04f6beb89a210fc07656a'];
+  window.onload = (event) => {
+      setTimeout(function() {
+          let flakeCount = 50;
+          if (window.innerWidth <= 650) {
+              flakeCount = 3;
+          }
+          snowFall.snow(document.getElementsByTagName('body')[0], {
+              image: SNOW_Picture,
+              minSize: 15,
+              maxSize: 32,
+              flakeCount: flakeCount,
+              maxSpeed: 3,
+              minSpeed: 1
+          });
+      }, 300);
+  };
+
+  $(window).on('load', function() {
+    $("#status").fadeOut();
+    $("#preloader").delay(350).fadeOut("slow");
+  });
+}
 
 setInterval(function() {
   var timespan = countdown(new Date("11/27/2021"), new Date());
@@ -218,3 +218,15 @@ setInterval(function() {
   $('.info.days span.odometer').text(timespan.days);
   $('.info.hours span.odometer').text(timespan.hours);
 }, 1000);
+
+if (window.location.hash == '#invitation') {
+  if (!isMobile()) {
+    setTimeout(function() {
+      $('html, body').animate({
+        scrollTop: $('#invitation').offset().top
+      }, 'slow');
+    }, 1000);
+  } else {
+    window.location.href = 'invitation';
+  }
+}
