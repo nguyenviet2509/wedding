@@ -183,7 +183,7 @@ var snowFall = function() {
   }
 }();
 
-if($('.home-page').length) {
+if($('.home-page').length > 0) {
   initMarqueeSlider();
 
   var SNOW_Picture = window.location.origin + '/images/heart.png';
@@ -228,5 +228,16 @@ if (window.location.hash == '#invitation') {
     }, 500);
   } else {
     window.location.href = 'invitation.html';
+  }
+}
+
+if ($('.invite-page').length > 0) {
+  var ua = navigator.userAgent.toLowerCase(); 
+  if (ua.indexOf('safari') != -1) { 
+    if (ua.indexOf('chrome') > -1) {
+      $('.invite-frame, .invite-container').addClass('chrome');
+    } else {
+      $('.invite-frame, .invite-container').addClass('safari');
+    }
   }
 }
