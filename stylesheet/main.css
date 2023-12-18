@@ -171,7 +171,7 @@ img {
   top: 35% !important;
 }
 .invite-wrap .invite-frame {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 120px);
   border-radius: 4px;
   border: 7px solid transparent;
   margin: 10px;
