@@ -225,7 +225,7 @@ if (window.location.hash == '#invitation') {
       $('html, body').animate({
         scrollTop: $('#invitation').offset().top
       }, 'slow');
-    }, 1000);
+    }, 500);
   } else {
     window.location.href = 'invitation';
   }
