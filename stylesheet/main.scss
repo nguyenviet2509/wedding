@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700');
 
 @font-face {
   font-family: 'SVN-Saudagar';
   src: url('../font/SVN-Saudagar.otf');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700');
+
+@font-face {
+  font-family: 'SVN-Saudagar';
+  src: url('../fonts/SVN-Saudagar.otf');
+}
+
+@font-face {
+  font-family: 'monallesia';
+  src: url('../fonts/monallesiascript.woff2');
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 }
 
 html, body, div, span, applet, object, iframe,
@@ -49,8 +62,18 @@ html, body {
     font-size: 50%;
 }
 
+<<<<<<< HEAD
 body {
 	line-height: 1.5;
+=======
+html {
+	scroll-behavior: smooth!important;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 1.6rem;
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 	font-family: 'Cormorant', serif;
 	color: #121729;
 }
@@ -103,6 +126,11 @@ img {
 .invite-page {
 	overflow: hidden;
 	perspective: 1000px;
+<<<<<<< HEAD
+=======
+	max-width: 450px;
+	margin: 0 auto;
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 }
 
 .text-fill-color {
@@ -122,11 +150,19 @@ img {
 	opacity: 0.4;
 }
 
+<<<<<<< HEAD
 .invite-wrap {
   	transform-style: preserve-3d;
 
   	& .invite-front,
 	& .invite-opening{
+=======
+	.invite-wrap {
+  	transform-style: preserve-3d;
+
+  	& .invite-front,
+		& .invite-opening{
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 	  	position: absolute;
 	  	color: black;
 	  	width: 100%;
@@ -162,6 +198,14 @@ img {
 		background-clip: padding-box;
 		background: #fff;
 
+<<<<<<< HEAD
+=======
+		&.chrome,
+		&.safari {
+			height: calc(100vh - 110px);
+		}
+
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 		&:before {
 		  	content: "";
 		  	position: absolute;
@@ -180,6 +224,14 @@ img {
 		transform: translate(-50%, -50%);
 		width: 100%;
 		z-index: 9999;
+<<<<<<< HEAD
+=======
+
+		&.chrome,
+		&.safari {
+			top: 45%;
+		}
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 	}
 
 	& .invite-title {
@@ -309,6 +361,10 @@ img {
 		text-align: center;
 		width: 100px;
 		margin: 0 auto;
+<<<<<<< HEAD
+=======
+		cursor: pointer;
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 
 		&:before {
 			content: "";
@@ -422,6 +478,44 @@ img {
 	}
 }
 
+<<<<<<< HEAD
+=======
+/* Index */
+.img-scroll-animate {
+
+	& .row {
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	}
+
+	&.reverse {
+		margin-top: 20px;
+	}
+}
+/* End Index */
+
+/* Catalogue */
+/* End Catalogue */
+
+@media(min-width: 767px) {
+	.invite-wrap {
+
+		& .invite-front.flipped {
+	  	transform: rotateY(-125deg);
+		}
+	}
+}
+
+@media(min-width: 1024px) {
+	.invite-wrap {
+
+		& .invite-front.flipped {
+	  	transform: rotateY(-110deg);
+		}
+	}
+}
+
+>>>>>>> 25e6b37382a946e4a27b41030f8f8c69be18325c
 @media(max-height: 670px), (max-width: 365px) {
 	html, body {
 		font-size: 40%;
