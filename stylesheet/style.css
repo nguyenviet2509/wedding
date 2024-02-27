@@ -5595,7 +5595,7 @@ wpo-hero-slider-s4
 .static-hero-s4 {
   height: 100vh;
   min-height: 920px;
-  background: url(../images/slider/slide-15.jpg) no-repeat center center;
+  background: url(../images/wedding/DAT_6025.png) no-repeat center center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9346,7 +9346,6 @@ wpo-hero-slider-s4
   font-size: 20px;
   line-height: 29px;
   color: #939580;
-  margin-bottom: 20px;
   display: block;
 }
 
@@ -10248,7 +10247,6 @@ wpo-hero-slider-s4
   font-size: 20px;
   line-height: 27px;
   text-align: center;
-  max-width: 270px;
   margin: 0 auto;
   color: #828282;
   margin-bottom: 20px;
