@@ -210,7 +210,7 @@ if($('.home-page').length > 0) {
   });
 }
 
-if ($('.info.year').length > 0) {
+if ($('.info.years').length > 0) {
   setInterval(function() {
     var timespan = countdown(new Date("11/27/2021"), new Date());
     $('.info.years span.odometer').text(timespan.years);

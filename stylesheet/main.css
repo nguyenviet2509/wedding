@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700");
+:root {
+
+}
+
 @font-face {
   font-family: 'SVN-Saudagar';
   src: url("../font/SVN-Saudagar.otf");
 }
-@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700");
 @font-face {
   font-family: 'SVN-Saudagar';
   src: url("../fonts/SVN-Saudagar.otf");
@@ -12,6 +14,10 @@
   font-family: 'monallesia';
   src: url("../fonts/monallesiascript.woff2");
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100..900&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,24 +67,36 @@ html, body {
   font-size: 50%;
 }
 
-body {
-  line-height: 1.5;
-}
-
 html {
   scroll-behavior: smooth !important;
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.5!important;
   font-size: 1.6rem;
-  font-family: 'Cormorant', serif;
+  font-family: "Inter", sans-serif!important;
   color: #121729;
+}
+
+p {
+  line-height: 1.5!important;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-vibe {
+  font-family: "Great Vibes", sans-serif;
 }
 
 .font-charm {
