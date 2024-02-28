@@ -485,4 +485,11 @@ img {
   }
 }
 
+.invitation-img {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%)
+}
+
 /*# sourceMappingURL=main.css.map */
