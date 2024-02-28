@@ -185,7 +185,7 @@ var snowFall = function() {
 if($('.home-page').length > 0) {
   initMarqueeSlider();
 
-  var SNOW_Picture = window.location.origin + '/images/heart.png';
+  var SNOW_Picture = window.location.href + '/images/heart.png';
   var special_custom = ['646f6e3d778825e6f306667f', '64a04f6beb89a210fc07656a'];
   window.onload = (event) => {
       setTimeout(function() {
