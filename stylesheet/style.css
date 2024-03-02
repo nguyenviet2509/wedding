@@ -533,7 +533,7 @@ a.ui-button:active, .ui-button:active,
 @media (max-width: 575px) {
   .wpo-section-title h4,
   .wpo-section-title-s2 h4 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -10179,6 +10179,7 @@ wpo-hero-slider-s4
 
 .wpo-event-section .wpo-event-wrap .wpo-event-item .wpo-event-img img {
   width: 100%;
+  max-height: 271px;
 }
 
 @media (max-width: 1399px) {
