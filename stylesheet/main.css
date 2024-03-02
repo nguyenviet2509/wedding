@@ -492,4 +492,45 @@ img {
   transform: translateY(-50%)
 }
 
+#donate .modal-content {
+  background: #fff;
+}
+@media(min-width: 991px) {
+  #donate .modal-dialog {
+    min-width: 750px;
+  }
+}
+#donate .modal-header {
+  background-color: #D4B0A5;
+}
+#donate .modal-header * {
+  color: #fff;
+}
+#donate .donate-box {
+  display: flex;
+}
+#donate .donate-box .donate-card {
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 20px;
+  border: 3px solid #D4B0A5;
+  border-radius: 10px;
+}
+#donate .donate-box p {
+  font-size: 14px;
+  margin: 0;
+}
+#donate .donate-qr img {
+  border: 1px solid #eee;
+}
+
+@media(max-width: 767px) {
+  #donate .donate-box {
+    flex-wrap: wrap;
+  }
+  #donate .donate-box .donate-card {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
