@@ -589,7 +589,7 @@ a.ui-button:active, .ui-button:active,
 @media (max-width: 575px) {
   .wpo-section-title h2,
   .wpo-section-title-s2 h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 0;
   }
 }

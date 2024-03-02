@@ -531,6 +531,13 @@ img {
   #donate .donate-box .donate-card {
     width: 100%;
   }
+  .invitation-img {
+    position: unset;
+    transform: unset;
+  }
+  .wpo-site-header .navigation {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
